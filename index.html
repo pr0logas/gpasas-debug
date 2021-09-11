@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="lt-LT">
+
+<head>
+  <title>Tikrinti | Galimybių pasas</title>
+  <link rel="manifest" href="/dist/manifest.webmanifest" />
+  <meta charset="utf-8">
+<link rel="icon" href="/dist/images/logo.ico" />
+<link rel="apple-touch-icon" href="/dist/images/logo_x192.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="theme-color" content="#fff">
+<link rel="stylesheet" href="./main.css">
+<link rel="prefetch" href="/dist/images/spinner.gif" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Galimybių pasas" />
+<meta property="og:description" content="Galimybių pasas" />
+<meta property="og:determiner" content="" />
+<meta property="og:image" content="/dist/images/share-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:locale" content="lt_LT" />
+
+<meta property="og:locale:alternate" content="en_LT" />
+
+
+  <script>
+    var certificateKey = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8LnAER0q8iyuIG6yGNBE/8/hoDgrg0oq/ko0vLsmJWMzop31VTbT5uZe0oivYTFaa/g1DXHhWYzS3ld85d8BzCT46ySMI2WkDKEwGLLZg6Fe+bKzd+Zr6hg5+Oss+CNt9d3O4EdXgsDF2UcZeZd1o/waKyVAaXN9hhBimPqz00tMyGknSy1lhl5Moom6+DKqRg2eNb1bYoFTEiDXEcfuq8xxYEYNSAjdcl/DRJ7pPnM+FlAC4uPXnVYNzAXmCQD4l8zY7SccZvxfc0NAOBVuTBn2pA/yD/GsOli1a6Gi38dGCo7syjyvm/tT/anSHiIC4DClthvDlKGNB4VDcjPvXwIDAQAB'
+    var i18n = {
+      status_title_GREEN: "Galimybių pasas",
+      status_description_GREEN: "Kontaktinės veiklos leidžiamos",
+      status_title_RED: "Kontaktinės veiklos ribojamos",
+      status_description_RED: "Galimybių pasas negalioja. Pasibaigusi jo galiojimo trukmė arba nebuvo galima įsitikinti parašo autentiškumu.",
+      device_failed_to_start: "Nepavyko įjungti kameros Jūsų įrenginyje"
+    }
+    var passSymbols = {
+      green: '/dist/images/pass-symbol-green.png',
+      red: '/dist/images/pass-symbol-red.png'
+    }
+  </script>
+</head>
+
+<body>
+  <div class="intro">
+    <div class="bg-grey">
+      <div class="layout">
+        <div class="top-bar all-cols">
+    <a href="/?lang=lt" class="logo">
+        <img src="/dist/images/logo.png" alt="Eiti į pradinį puslapį" with="40px" height="40px"/>
+        <div class="logo-text">
+            <p><strong>Galimybių</strong><br/>pasas</p>
+        </div>
+    </a>
+    <div class="top-bar-spacer"></div>
+    
+    
+    <div class="languages">
+        <img class="selected-option" src="/dist/images/flag-lt.png" srcset="/dist/images/flag-lt-2x.png 2x" alt="Lietuvių" width="24px" height="16px"/>
+        <span class="selected-option">lt</span>
+        <div class="dropdown-container">
+            <button class="button language-selector-button" aria-label="Pasirinkite kalbą" aria-haspopup="menu">
+                <img src="/dist/images/arrow-down.png" srcset="/dist/images/arrow-down-2x.png 2x" alt="" width="14px" height="8px">
+            </button>
+            <div class="drawer">
+                <div class="drawer-backdrop"></div>
+                <div class="drawer-content">
+                    <div class="drawer-title">Pasirinkite kalbą</div>
+                    <ul class="dropdown">
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/?lang=en">
+                                <img src="/dist/images/flag-en.png" srcset="/dist/images/flag-en-2x.png 2x" alt="English" width="24px" height="16px" />
+                                English
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    
+      
+        
+      
+    
+</div>
+      </div>
+      <div role="main" class="layout hd-mb30">
+        <div class="text hd-col-1-of-2 sd-all-cols">
+            <h1><strong>Galimybių pasą</strong> gali gauti asmenys:</h1>
+            <ul>
+                <li>gavę neigiamą COVID-19 testo rezultatą;</li>
+                <li>pasiskiepiję nuo COVID-19;</li>
+                <li>persirgę COVID-19.</li>
+            </ul>
+        </div>
+        <div class="main-form hd-col-1-of-2  hd-rows-2-to-3 hd-only">
+            <input class="styled-checkbox" type="checkbox" id="terms-and-conditions-hd" autocomplete="off" disabled="disabled" />
+            <label for="terms-and-conditions-hd" class="terms-and-conditions">
+              Sutinku su <a href="https://eimin.lrv.lt/uploads/eimin/documents/files/GP_Privatumo_politika.pdf" target="_blank" rel="noopener">sąlygomis ir taisyklėmis</a>
+            </label>
+            <button class="form-submitbutton form-button" data-id="scan-button" disabled="disabled" >Pradėti skenavimą</button>
+            <p class="form-error" style="display: none"><img src="/dist/images/exclamation-mark.png">Jūsų naršyklė nepalaikoma</p>
+        </div>
+        <div class="banner main-graphic hd-col-2-of-2 sd-all-cols hd-rows-1-to-3">
+            <img src="/dist/images/index-banner.png" srcset="/dist/images/index-banner-2x.png 2x" class="mainImg" alt="Apsaugokite save ir savo šeimą"/>
+        </div>
+      </div>
+    </div>
+
+    <div role="contentinfo" class="bg-white">
+      <div class="layout">
+        <div class="footer-section form-mobile sd-only all-cols">
+          <input class="styled-checkbox" type="checkbox" id="terms-and-conditions-sd" autocomplete="off" disabled="disabled" />
+          <label for="terms-and-conditions-sd" class="terms-and-conditions">
+              Sutinku su <a href="https://eimin.lrv.lt/uploads/eimin/documents/files/GP_Privatumo_politika.pdf" target="_blank" rel="noopener">sąlygomis ir taisyklėmis</a>
+          </label>
+          <button class="form-submitbutton form-button" data-id="scan-button" disabled="disabled">Pradėti skenavimą</button>
+            <p class="form-error" style="display: none"><img src="/dist/images/exclamation-mark.png">Jūsų naršyklė nepalaikoma</p>
+        </div>
+      </div>
+      <div class="separator sd-only"></div>
+      <div class="layout" >
+        <div class="all-cols footer-section">
+    <div class="faq">
+        <h2 class="sd-only">Naudinga informacija</h2>
+        <a href="https://eimin.lrv.lt/lt/naudinga-informacija-1/informacija-verslui-del-covid-19/verslo-salygos-karantino-metu/galimybiu-pasas" target="_blank" rel="noopener" class="link-block">
+            <h3>DUK</h3>
+            <p>Čia rasite atsakymus į dažnai užduodamus klausimus apie Galimybių pasą.</p>
+        </a>
+        <span class="link-block">
+            <h3>Informacija Lietuvos gyventojams</h3>
+            <p><a target="_blank" rel="noopener" href="tel:+37052364577">+370 5 236 45 77</a><br><span>Darbo laikas: I-IV 8:00 - 17:00 ir V 8:00-16:00</span></p>
+        </span>
+        <a href="https://koronastop.lrv.lt/" target="_blank" rel="noopener" class="link-block">
+            <h3>Registracija vakcinai</h3>
+            <p><strong>koronastop.lt</strong></p>
+        </a>
+    </div>
+    <div class="faq">
+        <a href="https://selfreg.myhybridlab.com/covid-pass" target="_blank" rel="noopener" class="link-block">
+            <h3>Registracija COVID-19 testui</h3>
+            <p><strong>1808.lt arba tel. 1808</strong></p>
+        </a>
+        
+        <a href="https://eimin.lrv.lt/uploads/eimin/documents/files/GP_tikrinti.pdf" target="_blank" rel="noopener" class="link-block">
+            <h3>Naudotojo vadovas</h3>
+            <p>Čia rasite detalią instrukciją kaip tikrinti Galimybių pasą.</p>
+        </a>
+        <a href="https://gp.esveikata.lt" target="_blank" rel="noopener" class="link-block">
+            <h3>Gauti galimybių pasą</h3>
+            <p>Šiame puslapyje galite gauti Galimybių pasą.</p>
+        </a>
+        
+    </div>
+</div>
+      </div>
+      <div class="separator sd-only"></div>
+      <div class="layout" >
+
+        <div class="all-cols footer-section contacts">
+    <p>
+        © Valstybės įmonė Registrų centras
+        <br/>
+        <br/>
+        Duomenys apie įmonę kaupiami ir saugomi Juridinių asmenų registre.
+        <br/>
+        Įmonės kodas 124110246 | Adresas Lvovo g. 25-101, 09320 Vilnius
+    </p>
+    <div class="contacts-logos">
+        <img src="/dist/images/registru-centras.png" srcset="/dist/images/registru-centras-2x.png 2x" alt="Registrų centras" width="125px" height="43px"/>
+        <img src="/dist/images/ekonomikos-ir-inovaciju-ministerija.png" srcset="/dist/images/ekonomikos-ir-inovaciju-ministerija-2x.png 2x" alt="Ekonomikos ir inovacijų ministerija" width="88px" height="126px"/>
+    </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="scanner" hidden>
+    
+    <div class="bg-white">
+      <div class="layout">
+          <div class="top-bar all-cols">
+    <a href="/?lang=lt" class="logo">
+        <img src="/dist/images/logo.png" alt="Eiti į pradinį puslapį" with="40px" height="40px"/>
+        <div class="logo-text">
+            <p><strong>Galimybių</strong><br/>pasas</p>
+        </div>
+    </a>
+    <div class="top-bar-spacer"></div>
+    
+    
+    <div class="languages">
+        <img class="selected-option" src="/dist/images/flag-lt.png" srcset="/dist/images/flag-lt-2x.png 2x" alt="Lietuvių" width="24px" height="16px"/>
+        <span class="selected-option">lt</span>
+        <div class="dropdown-container">
+            <button class="button language-selector-button" aria-label="Pasirinkite kalbą" aria-haspopup="menu">
+                <img src="/dist/images/arrow-down.png" srcset="/dist/images/arrow-down-2x.png 2x" alt="" width="14px" height="8px">
+            </button>
+            <div class="drawer">
+                <div class="drawer-backdrop"></div>
+                <div class="drawer-content">
+                    <div class="drawer-title">Pasirinkite kalbą</div>
+                    <ul class="dropdown">
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/?lang=en">
+                                <img src="/dist/images/flag-en.png" srcset="/dist/images/flag-en-2x.png 2x" alt="English" width="24px" height="16px" />
+                                English
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    
+      
+        
+      
+    
+</div>
+      </div>
+    </div>
+      <div class="video-container">
+        <div class="video-frame-overlay">
+          <div class="frame-corner t l">
+            <div class="frame-part t h"></div>
+            <div class="frame-part l v"></div>
+          </div>
+          <div class="frame-corner t r">
+            <div class="frame-part t h"></div>
+            <div class="frame-part r v"></div>
+          </div>
+          <div class="frame-corner b l">
+            <div class="frame-part b h"></div>
+            <div class="frame-part l v"></div>
+          </div>
+          <div class="frame-corner b r">
+            <div class="frame-part b h"></div>
+            <div class="frame-part r v"></div>
+          </div>
+        </div>
+        <video id="output" playsinline=""></video>
+      </div>
+      <canvas id="snapshot" height="800" width="1200" style="display: none;" hidden></canvas>
+ 
+  </div>
+
+
+  <div class="result" hidden>
+    <div class="layout">
+      <div class="top-bar all-cols">
+    <a href="/?lang=lt" class="logo">
+        <img src="/dist/images/logo.png" alt="Eiti į pradinį puslapį" with="40px" height="40px"/>
+        <div class="logo-text">
+            <p><strong>Galimybių</strong><br/>pasas</p>
+        </div>
+    </a>
+    <div class="top-bar-spacer"></div>
+    
+    
+    <div class="languages">
+        <img class="selected-option" src="/dist/images/flag-lt.png" srcset="/dist/images/flag-lt-2x.png 2x" alt="Lietuvių" width="24px" height="16px"/>
+        <span class="selected-option">lt</span>
+        <div class="dropdown-container">
+            <button class="button language-selector-button" aria-label="Pasirinkite kalbą" aria-haspopup="menu">
+                <img src="/dist/images/arrow-down.png" srcset="/dist/images/arrow-down-2x.png 2x" alt="" width="14px" height="8px">
+            </button>
+            <div class="drawer">
+                <div class="drawer-backdrop"></div>
+                <div class="drawer-content">
+                    <div class="drawer-title">Pasirinkite kalbą</div>
+                    <ul class="dropdown">
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/?lang=en">
+                                <img src="/dist/images/flag-en.png" srcset="/dist/images/flag-en-2x.png 2x" alt="English" width="24px" height="16px" />
+                                English
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    
+      
+        
+      
+    
+</div>
+    </div>
+    <div role="main" class="layout hd-mb30">
+
+      <div class="hd-grid all-cols pass-info GREEN">
+        <div class="pass-status GREEN hd-g-col-1-span-2 hd-r-col-1-span-2 sd-all-cols">
+          <span class="symbol" id="pass-symbol"><img src="/dist/images/pass-symbol-green.png" alt=""></span>
+          <div class="description">
+            <h1 id="pass-title"></h1>
+            <p id="pass-description"></p>
+          </div>
+          <div class="pass-status-form hd-only">
+            <button class="form-button" data-id="scan-button">Skenuoti kitą</button>
+          </div>
+        </div>
+        <div class="personal-info hd-g-col-3-span-1 hd-r-col-3-span-1">
+          <div class="info-row">
+            <span class="info-label">Vardas, pavardė</span>
+            <span class="info-value" id="info-name"></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Gimimo metai</span>
+            <span class="info-value" id="info-year-of-birth"></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Išdavimo data</span>
+            <span class="info-value" id="info-issued"></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Galioja iki</span>
+            <span class="info-value" id="info-valid-till"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout">
+        <div class="footer-section form-mobile sd-only all-cols">
+          <button class="form-button" data-id="scan-button">Skenuoti kitą</button>
+        </div>
+    </div>
+    <div class="separator sd-only"></div>
+    <div class="layout" >
+      <div class="all-cols footer-section">
+    <div class="faq">
+        <h2 class="sd-only">Naudinga informacija</h2>
+        <a href="https://eimin.lrv.lt/lt/naudinga-informacija-1/informacija-verslui-del-covid-19/verslo-salygos-karantino-metu/galimybiu-pasas" target="_blank" rel="noopener" class="link-block">
+            <h3>DUK</h3>
+            <p>Čia rasite atsakymus į dažnai užduodamus klausimus apie Galimybių pasą.</p>
+        </a>
+        <span class="link-block">
+            <h3>Informacija Lietuvos gyventojams</h3>
+            <p><a target="_blank" rel="noopener" href="tel:+37052364577">+370 5 236 45 77</a><br><span>Darbo laikas: I-IV 8:00 - 17:00 ir V 8:00-16:00</span></p>
+        </span>
+        <a href="https://koronastop.lrv.lt/" target="_blank" rel="noopener" class="link-block">
+            <h3>Registracija vakcinai</h3>
+            <p><strong>koronastop.lt</strong></p>
+        </a>
+    </div>
+    <div class="faq">
+        <a href="https://selfreg.myhybridlab.com/covid-pass" target="_blank" rel="noopener" class="link-block">
+            <h3>Registracija COVID-19 testui</h3>
+            <p><strong>1808.lt arba tel. 1808</strong></p>
+        </a>
+        
+        <a href="https://eimin.lrv.lt/uploads/eimin/documents/files/GP_gauti.pdf" target="_blank" rel="noopener" class="link-block">
+            <h3>Naudotojo vadovas</h3>
+            <p>Čia rasite detalią instrukciją kaip gauti ir naudotis Galimybių pasu.</p>
+        </a>
+        <a href="https://tikrink.esveikata.lt" target="_blank" rel="noopener" class="link-block">
+            <h3>Tikrintojo puslapis</h3>
+            <p>Šiame puslapyje galite patikrinti galimybių paso statusą.</p>
+        </a>
+        
+    </div>
+</div>
+    </div>
+    <div class="separator sd-only"></div>
+    <div class="layout" >
+
+      <div class="all-cols footer-section contacts">
+    <p>
+        © Valstybės įmonė Registrų centras
+        <br/>
+        <br/>
+        Duomenys apie įmonę kaupiami ir saugomi Juridinių asmenų registre.
+        <br/>
+        Įmonės kodas 124110246 | Adresas Lvovo g. 25-101, 09320 Vilnius
+    </p>
+    <div class="contacts-logos">
+        <img src="/dist/images/registru-centras.png" srcset="/dist/images/registru-centras-2x.png 2x" alt="Registrų centras" width="125px" height="43px"/>
+        <img src="/dist/images/ekonomikos-ir-inovaciju-ministerija.png" srcset="/dist/images/ekonomikos-ir-inovaciju-ministerija-2x.png 2x" alt="Ekonomikos ir inovacijų ministerija" width="88px" height="126px"/>
+    </div>
+</div>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>
